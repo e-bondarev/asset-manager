@@ -33,7 +33,7 @@ int main(int argc, char* argv[])
 
 	// Load model
 	{
-		Model model("D:/Dev/anima/assets/models/1.fbx");
+		Model model("D:/Dev/asset-manager/assets/models/1.fbx");
 
 		avatar.init(model.bone_map, model.skeleton);
 
@@ -42,9 +42,9 @@ int main(int argc, char* argv[])
 			vao.add_vbo(VBO::Type::Indices, VBO::Usage::Static, model.indices.size(), sizeof(uint32_t), &model.indices[0]);
 	}
 
-	Image image("D:/Dev/anima/assets/textures/1.png");
+	Image image("D:/Dev/asset-manager/assets/textures/1.png");
 
-	Animation animation("D:/Dev/anima/assets/models/1.fbx");
+	Animation animation("D:/Dev/asset-manager/assets/models/1.fbx");
 
 	Texture texture(image.width, image.height, image.data, GL_RGBA, GL_RGBA, GL_UNSIGNED_BYTE, { Texture::set_interpolation(Interpolation::Constant) });
 
